@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wamilles CMS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="js/dbInit.js"></script>
+  <script src="js/boardInit.js"></script>
+</head>
+
+<body>
+
+  <div class="popup">
+    Успешно сохранено
+  </div>
+
+  <header>
+    <div class="wrapper">
+      <div class="title">Wamiles CMS</div>
+      <div class="sign-in" id="sign-in-status">
+        загрузка..
+      </div>
+
+      <p>
+        <a class="link__transition js-link" href="http://wamiles.com.ua/training">
+          <span class="link__text">перейти к лендингу</span>
+          <span class="link__layout"></span>
+        </a>
+      </p>
+
+      <p>
+        <a class="link__transition js-link" href="http://wamiles.com.ua">
+          <span class="link__text">перейти к wamiles.com.ua</span>
+          <span class="link__layout"></span>
+        </a>
+      </p>
+    </div>
+
+  </header>
+
+
+  <div id="wrapper" class="wrapper-main">
+    <div class="wrapper">
+      <form id="form" action="">
+        <div class="box">
+          <h2>Дата для счетчика</h2>
+          <p>Дата проведения тренинга для работы обратного отсчета на странице. 
+            Ставить в интервале не более 99 дней от текущей даты. 
+            В противном случае будут отображаться только последние две цифры (напр. - 55 дней вместо 155 дней)</p>
+          <input id="date" type="date" value="">
+          <button class="js-button" type="button" id="submit-button-date">Сохранить</button>
+        </div>
+
+        <div class="box">
+          <h2>Дата проведения словами</h2>
+          <p>
+              Фраза с датами проведения тренинга в верхней и нижней частях страницы
+          </p>
+          <textarea name="date-word" id="date-word" cols="30" rows="2"></textarea>
+          <button class="js-button" type="button" id="submit-button-date-word">Сохранить</button>
+        </div>
+
+        <div class="box">
+          <h2>Место проведения</h2>
+          <p>
+              Место проведения тренинга в нижней части страницы
+          </p>
+          <textarea name="adress" id="adress" cols="30" rows="2"></textarea>
+          <button class="js-button" type="button" id="submit-button-adress">Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

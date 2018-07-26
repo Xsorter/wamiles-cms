@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wamilles CMS</title>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="js/dbInit.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <script src="js/auth-config.js"></script>
+    <script>
+        initApp = function() {
+            firebase.auth().onAuthStateChanged(
+                function(user) {
+                    if (user) {
+                        location.replace('board.html')
+                        console.log('logged')
+                    } else {
+
+                    }
+                },
+                function(error) {
+                    console.log(error);
+                }
+            );
+        };
+
+        window.addEventListener("load", function() {
+            initApp();
+        });
+    </script>
+</head>
+<body>
+    <div id="fauth">
+    </div>
+</body>
+</html>

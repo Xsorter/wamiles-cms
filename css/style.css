@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+body{
+    position: relative;
+}
+
+
+/*HEADER start*/
+
+header{
+    background: #212020;
+    color: #c5c5c5;
+    font-size: 16px;
+}
+
+header .title{
+    color: #fff;
+    font-size: 24px;
+}
+
+header .sign-in{
+    margin-top: 20px;
+}
+
+header .wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+/*HEADER end*/
+
+
+/*MAIN start*/
+
+.wrapper-main{
+    background: #e0e0e0;
+    padding: 20px 10px;
+}
+
+.wrapper-main .wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 80vh;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.wrapper-main .box{
+    border: 1px solid #e4e4e4;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.wrapper-main .box p{
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #484848;
+}
+
+.wrapper-main .box input, .wrapper-main .box textarea{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: none;
+    border-bottom: 1px solid #003696;
+    padding: 5px;
+    color: #3c3c3c;
+}
+
+.wrapper-main .box button{
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #2562ce;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+}
+
+.wrapper-main .box button:hover{
+    filter: saturate(4);
+}
+
+/*MAIN end*/
+
+
+
+.link__transition{
+    position: relative;
+    display: inline;
+    z-index: 2;
+    color: #d9f5ff;
+    transition: all 200ms linear;
+}
+
+.link__transition:hover{
+    color: #000;
+}
+
+.link__text{
+    position: relative;
+    z-index: 3;
+}
+
+.link__layout{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d9f5ff;
+    transition: transform 200ms linear;
+    transform: translateY(-712%);
+    will-change: transform;
+}
+
+.link__text:hover + .link__layout { 
+    transform: none; 
+}
+
+
+
+
+.popup{
+    background: green;
+    border-bottom: #00d600;
+    color: #fff;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    padding: 3px 10px;
+    font-weight: 700;
+    transition: transform 200ms linear;
+    transform: translateX(-120%);
+    will-change: transform;
+}
+
+.popup.active{
+    transform: none; 
+}
+
